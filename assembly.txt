@@ -4,15 +4,10 @@ j Exception
 Main:
 lui $s6,16384
 lui $t0,65535
-sll $zero,$zero,0
 addi $t0,$t0,64535
-sll $zero,$zero,0
-sll $zero,$zero,0
 sw $t0,0($s6)
 sw $t0,4($s6)
 addi $t0,$zero,3
-sll $zero,$zero,0
-sll $zero,$zero,0
 sw $t0,8($s6)
 addi $s0,$zero,64
 sw $s0,40($zero)
@@ -102,7 +97,6 @@ addi $v1,$zero,1
 j cycle
 cycle:
 lw $t0,36($s6)
-sll $zero,$zero,0
 sll $t0,$t0,31
 srl $t0,$t0,31
 beq $t0,$zero,InEnd
@@ -128,11 +122,11 @@ add $v0,$t2,$zero
 sw $v0,32($s6)
 sw $v0,12($s6)
 lw $t0,36($s6)
-sll $zero,$zero,0
 srl $t0,$t0,2
 bne $t0,$zero,InEnd
 addi $t2,$zero,2
 sw $t2,36($s6)
+sll $zero,$zero,0
 InEnd:
 jr $k0
 Exception:
