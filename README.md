@@ -7,3 +7,5 @@ LOL
 Good luck to you guys looking for version.
 There will be a long day for you to simulate and debug.
 LOL
+
+Oh, by the way. The style of this code is as shitty as the project itself. Never remind me of any inappropriate indent or variable name.
